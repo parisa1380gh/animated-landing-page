@@ -54,8 +54,13 @@ table {
 
 @font-face {
     font-family: "butlerlight";
-    src: url(../font/Butler-Light.woff);
+    src: url(../font/Butler-Medium.woff);
 }
+@font-face {
+    font-family: "butlerultralight";
+    src: url(../font/Butler-UltraLight.woff);
+}
+
 body{
     background: rgb(20, 20, 20);
 }
@@ -90,7 +95,7 @@ body{
 
 
 h1{
-    margin-top: 120px;
+    margin-top: 30px;
     font-family: "butlerbold";
     font-size: 40px;
 
@@ -98,7 +103,7 @@ h1{
 p{
     
     font-family: "butlerlight";
-    font-size: 12px;
+    font-size: 15px;
     padding-top:20px;
     line-height: 25px;
 
@@ -155,7 +160,6 @@ button{
 }
 
 .imgcont > img{
-    position:relative;
     z-index: 99;
     width:60%;
     transform:translateY(30px);
@@ -164,14 +168,14 @@ button{
 }
 .afterimg{
 
-    transform: scale(20);
+    transform: scale(10);
     position:absolute;
     top: 50px;
     left:50px; 
     width: 100%;
     height: 50%;
     background: rgb(250, 227, 17);
-    transition: 1s;
+    transition: 0.5s;
     clip-path:circle();
 
 }
@@ -196,7 +200,7 @@ button{
 }
 
 
-.container-landing:hover img{
+.container-landing:hover .mobile-cont{
     position:relative;
     width:60%;
     opacity: 1;
@@ -205,32 +209,44 @@ button{
     
 
 }
-p , button{
-    z-index: -1;
+.paragraph{
+    z-index: 9999;
     transform:translateY(100px);
     opacity: 0;
     transition:1.3s;
 }
-.container-landing:hover p ,.container-landing:hover button{
+.container-landing:hover .paragraph{
     transform:translateY(0px);
     opacity: 1;
 
 }
-h1{
-    z-index: 100;
-    transform:translateY(-100px);
-    transition:1.3s;
-}
-.container-landing:hover h1{
-    transform:translateY(0px);
-    opacity: 1;
 
-}
 
 .circle{
     position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    /* width: 20px;
+    height: 30px; */
+    /* z-index: -1; */
     background:white;
+    clip-path: circle();
+}
+
+.paracont--1{
+z-index: 99999;
+width:100%;
+}
+.paracont--1_child{
+width: 100%;
+display:flex;
+flex-direction: row;
+}
+.paracont--1_child img{
+width: 60px;
+height:60px;
+padding: 20px 10px 0 0;
+}
+.paracont--1_child p{
+    font-size: 10px;
+    font-family: "butlerultralight";
+    
 }
